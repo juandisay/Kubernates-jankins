@@ -108,19 +108,32 @@ systemctl start kubelet
 ## On kmaster
 ##### Initialize Kubernetes Cluster
 ```
-kubeadm init --apiserver-advertise-address=172.42.42.100 --pod-network-cidr=10.244.0.0/16
+kubeadm init --apiserver-advertise-address=192.168.99.100 --pod-network-cidr=192.168.0.0/16
+
+# note
+please check your network
+
 ```
 ##### Copy kube config
 To be able to use kubectl command to connect and interact with the cluster, the user needs kube config file.
 
-In my case, the user account is venkatn
+root configuration 
 ```
-mkdir /home/venkatn/.kube
-cp /etc/kubernetes/admin.conf /home/venkatn/.kube/config
-chown -R venkatn:venkatn /home/venkatn/.kube
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-##### Deploy flannel network
-This has to be done as the user in the above step (in my case it is __venkatn__)
+
+user configuration 
+```
+mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
+```
+##### Deploy flannel network for binding network
+github:
+https://github.com/coreos/flannel
+This has to be done as the user in the above step:
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
@@ -154,6 +167,12 @@ kubectl get nodes
 ##### Get component status
 ```
 kubectl get cs
+```
+
+##### More reference
+```
+1. https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker
+2. https://www.tecmint.com/network-between-guest-vm-and-host-virtualbox/
 ```
 
 
