@@ -173,6 +173,7 @@ kubectl get cs
 ```
 1. https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker
 2. https://www.tecmint.com/network-between-guest-vm-and-host-virtualbox/
+3. https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#append-home-kube-config-to-your-kubeconfig-environment-variable
 ```
 
 
