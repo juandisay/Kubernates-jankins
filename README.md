@@ -1,3 +1,3 @@
-# Kubernates-jankins
+# Kubernates and jankins
 
 ##### Introduction
