@@ -41,3 +41,12 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 # Openfaas
 
 ##### Introduction
+
+# DONATION / SPONSOR
+Hi, thanks for read.
+If you want donation or sponsor me,
+
+[donation](https://www.paypal.me/juandisay)
+
+Thanks;
+
