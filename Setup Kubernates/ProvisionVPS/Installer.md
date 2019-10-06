@@ -117,19 +117,30 @@ please check your network
 ##### Copy kube config
 To be able to use kubectl command to connect and interact with the cluster, the user needs kube config file.
 
-root configuration 
+send to root configuration 
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-user configuration 
+OR 
+
+send to user / non root configuration 
 ```
-mkdir -p $HOME/.kube
-cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-chown $(id -u):$(id -g) $HOME/.kube/config
+mkdir -p /home/deploy/.kube
+sudo cp /etc/kubernetes/admin.conf /home/deploy/.kube/config
+sudo chown user:pwduser /home/deploy/.kube/config
+export KUBECONFIG=/home/deploy/.kube/config
 ```
+
+##### NOTES FOR LINUX PROVISION SERVER
+please add 
+```
+export KUBECONFIG=<path/your/configuration>
+```
+to file ~/.bashrc
+
 ##### Deploy flannel network for binding network
 github:
 https://github.com/coreos/flannel
