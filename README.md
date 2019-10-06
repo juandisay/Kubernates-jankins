@@ -12,11 +12,18 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 ##### How to Install
 1. [Provision VPS ; os. Centos7](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/ProvisionVPS)
 2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/vagrant-setup)
+3. [Vagrant x AWS](#)
+4. [Vagrant x Digital ocean](#)
+5. [Raspberry Pi 4 Model B](#)
+6. [AWS](https://aws.amazon.com/kubernetes/)
+7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/)
 
-##### Configuration 
+##### Configuration
 
 ##### Deployment
-
+1. [Kubernetes Dashboard](https://github.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard)
+2. [nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx)
+3. [haproxy](#)
 
 # Jankins
 
