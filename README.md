@@ -25,7 +25,7 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 4. Types
 
 ##### Deployment Advanced
-1. [Kubernetes Dashboard; Types NodePort](https://raw.githubusercontent.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard/kd-types-NodePort.yaml)
+1. [Kubernetes Dashboard; Types NodePort](https://raw.githubusercontent.com/juandisay/automation-server/master/Configuration/kubernetes-dashboard/kd-types-NodePort.yaml)
 2. [nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx)
 3. [haproxy](#)
 4. [cert manager](#)
@@ -38,6 +38,6 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 ##### Introduction
 
 
-#Openfaas
+# Openfaas
 
 ##### Introduction
