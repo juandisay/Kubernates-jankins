@@ -19,13 +19,25 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/)
 
 ##### Configuration
+1. Config kube
+2. Replicas
+3. Auto Replicas
+4. Types
 
-##### Deployment
-1. [Kubernetes Dashboard](https://github.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard)
+##### Deployment Advanced
+1. [Kubernetes Dashboard; Types NodePort](https://raw.githubusercontent.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard/kd-types-NodePort.yaml)
 2. [nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx)
 3. [haproxy](#)
+4. [cert manager](#)
+5. [grafana](#)
+6. [prometheus](#)
 
-# Jankins
+
+# Jankins automation deploy
 
 ##### Introduction
 
+
+#Openfaas
+
+##### Introduction
