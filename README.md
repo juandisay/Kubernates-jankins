@@ -36,13 +36,19 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 # Jankins automation deploy
 
 ##### Introduction
+Coming soon
 
 
 # Openfaas
 
 ##### Introduction
+Coming soon
 
-# DONATION / SPONSOR
+
+```
+
+```
+##### DONATION / SPONSOR
 Hi, thanks for read.
 If you want donation or sponsor me,
 
