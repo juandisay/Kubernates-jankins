@@ -46,10 +46,10 @@ Coming soon
 
 
 ```
- DONATION / SPONSOR                                                                         juandisay.org @2019
+ DONATION / SPONSOR / mail: info@juandisay.org
 ```
 Hi, thanks for read.
-If you want donation or sponsor me,
+If you want donation or sponsor me ,
 
 [donation](https://www.paypal.me/juandisay)
 
