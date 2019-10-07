@@ -46,7 +46,7 @@ Coming soon
 
 
 ```
-     DONATION / SPONSOR
+ DONATION / SPONSOR                                                             @2019
 ```
 Hi, thanks for read.
 If you want donation or sponsor me,
