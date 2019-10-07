@@ -3,7 +3,7 @@ Follow this documentation to set up a Kubernetes cluster on __CentOS 7__ Virtual
 
 This documentation guides you in setting up a cluster with one master node and one worker node.
 
-## Assumptions if you setup in local
+## Assumptions if you setup in local or DNS online
 |Role|FQDN|IP|OS|RAM|CPU|
 |----|----|----|----|----|----|
 |Master|kmaster.example.com|192.168.99.100|CentOS 7|2G|2|
