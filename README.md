@@ -46,7 +46,7 @@ Coming soon
 
 
 ```
- DONATION / SPONSOR                                                             @2019
+ DONATION / SPONSOR                                                                               juandisay.org @2019
 ```
 Hi, thanks for read.
 If you want donation or sponsor me,
