@@ -48,11 +48,10 @@ Coming soon
 Coming soon
 
 
-
-> DONATION / SPONSOR / mail: info@juandisay.org / Copyright @ 2019 / made with love
+>
+> DONATION / SPONSOR:
 Hi, thanks for read.
 If you want donation or sponsor me ,
-[donation](https://www.paypal.me/juandisay)
-
+[donation](https://www.paypal.me/juandisay).
 Thanks;
 
