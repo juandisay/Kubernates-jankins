@@ -50,7 +50,7 @@ echo "reload daemon"
 systemctl daemon-reload
 echo "restart"
 systemctl restart docker
-echo "finally, docker setup done!"
+echo "finally, docker setup was done!"
 
 echo "configuration extend environtment system"
 
@@ -71,7 +71,7 @@ sed -i '/swap/d' /etc/fstab
 echo "swapoff"
 swapoff -a
 
-echo "finally, configuration DOne! next Kubernates setup!"
+echo "finally, configuration was DOne! next Kubernates setup!"
 
 # Update sysctl settings for Kubernetes networking
 echo "update sysctl 4 k8s network"
@@ -105,4 +105,5 @@ systemctl enable kubelet
 
 echo "start kubelet"
 systemctl start kubelet
+echo "Setup Kubernet was Done!"
 
