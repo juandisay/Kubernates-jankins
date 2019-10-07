@@ -17,14 +17,14 @@ Kubernetes is hosted by the Cloud Native Computing Foundation (CNCF). If your co
 more information: [Kubernates github and documentation](https://github.com/kubernetes/kubernetes)
 
 ##### How to Install
-1. [Provision VPS](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/ProvisionVPS)
-   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/Setup%20Kubernates/ProvisionVPS/bootstrap-centos7.sh)
-2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/vagrant-setup)
+1. [Provision VPS](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/ProvisionVPS){:target="_blank"}
+   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/Setup%20Kubernates/ProvisionVPS/bootstrap-centos7.sh){:target="_blank"}
+2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/vagrant-setup){:target="_blank"}
 3. [Vagrant x AWS](#)
 4. [Vagrant x Digital ocean](#)
 5. [Raspberry Pi 4 Model B](#)
-6. [AWS](https://aws.amazon.com/kubernetes/)
-7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/)
+6. [AWS](https://aws.amazon.com/kubernetes/){:target="_blank"}
+7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/){:target="_blank"}
 
 ##### Configuration
 > Kube system config
@@ -38,12 +38,12 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 
 3. Types
 ##### Deployment Advanced
-1. [Kubernetes Dashboard; Types NodePort](https://raw.githubusercontent.com/juandisay/automation-server/master/Configuration/kubernetes-dashboard/kd-types-NodePort.yaml)
-2. [nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx)
-3. [haproxy](#)
-4. [cert manager](#)
-5. [grafana](#)
-6. [prometheus](#)
+1. [Kubernetes Dashboard](https://github.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard){:target="_blank"}
+2. [Nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx){:target="_blank"}
+3. [Haproxy](#)
+4. [Cert manager](#)
+5. [Grafana](#)
+6. [Prometheus](#)
 
 
 # Jankins automation deploy
