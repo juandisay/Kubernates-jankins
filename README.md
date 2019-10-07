@@ -19,10 +19,13 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/)
 
 ##### Configuration
+> Kube system config
 1. Config kube
-2. Replicas
-3. Auto Replicas
-4. Types
+>
+> Kube pods, service, and Deployment config
+1. Replicas
+2. Auto Replicas
+3. Types
 
 ##### Deployment Advanced
 1. [Kubernetes Dashboard; Types NodePort](https://raw.githubusercontent.com/juandisay/automation-server/master/Configuration/kubernetes-dashboard/kd-types-NodePort.yaml)
@@ -45,12 +48,10 @@ Coming soon
 Coming soon
 
 
-```
- DONATION / SPONSOR / mail: info@juandisay.org
-```
+
+> DONATION / SPONSOR / mail: info@juandisay.org / Copyright @ 2019 / made with love
 Hi, thanks for read.
 If you want donation or sponsor me ,
-
 [donation](https://www.paypal.me/juandisay)
 
 Thanks;
