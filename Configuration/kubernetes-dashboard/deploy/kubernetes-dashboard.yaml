@@ -12,15 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# ------------------- Dashboard Secret ------------------- #
-
 apiVersion: v1
 kind: Secret
 metadata:
   labels:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard-certs
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 type: Opaque
 
 ---
@@ -32,7 +30,7 @@ metadata:
   labels:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 
 ---
 # ------------------- Dashboard Role & Role Binding ------------------- #
@@ -41,7 +39,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: kubernetes-dashboard-minimal
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 rules:
   # Allow Dashboard to create 'kubernetes-dashboard-key-holder' secret.
 - apiGroups: [""]
@@ -76,7 +74,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: kubernetes-dashboard-minimal
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -84,7 +82,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: kubernetes-dashboard
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 
 ---
 # ------------------- Dashboard Deployment ------------------- #
@@ -95,7 +93,7 @@ metadata:
   labels:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 spec:
   replicas: 1
   revisionHistoryLimit: 10
@@ -153,12 +151,12 @@ metadata:
   labels:
     k8s-app: kubernetes-dashboard
   name: kubernetes-dashboard
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 spec:
-  type: NodePort
+  # type: NodePort
   ports:
-    - port: 80
+    - port: 443
       targetPort: 8443
-      nodePort: 32323
+      # nodePort: 32323
   selector:
     k8s-app: kubernetes-dashboard
