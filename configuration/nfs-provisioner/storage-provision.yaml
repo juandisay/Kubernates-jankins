@@ -1,0 +1,103 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","integration-test":"storage-provisioner"},"name":"storage-provisioner","namespace":"kube-system"},"spec":{"containers":[{"command":["/storage-provisioner"],"image":"gcr.io/k8s-minikube/storage-provisioner:v1.8.1","imagePullPolicy":"IfNotPresent","name":"storage-provisioner","volumeMounts":[{"mountPath":"/tmp","name":"tmp"}]}],"hostNetwork":true,"serviceAccountName":"storage-provisioner","volumes":[{"hostPath":{"path":"/tmp","type":"Directory"},"name":"tmp"}]}}
+  creationTimestamp: "2019-10-02T13:43:04Z"
+  labels:
+    addonmanager.kubernetes.io/mode: Reconcile
+    integration-test: storage-provisioner
+  name: storage-provisioner
+  namespace: kube-system
+  resourceVersion: "26051"
+  selfLink: /api/v1/namespaces/kube-system/pods/storage-provisioner
+  uid: c4401257-2c4f-4d9b-8806-e5591eee3e9f
+spec:
+  containers:
+  - command:
+    - /storage-provisioner
+    image: gcr.io/k8s-minikube/storage-provisioner:v1.8.1
+    imagePullPolicy: IfNotPresent
+    name: storage-provisioner
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp
+      name: tmp
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: storage-provisioner-token-tzm92
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: minikube
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: storage-provisioner
+  serviceAccountName: storage-provisioner
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - hostPath:
+      path: /tmp
+      type: Directory
+    name: tmp
+  - name: storage-provisioner-token-tzm92
+    secret:
+      defaultMode: 420
+      secretName: storage-provisioner-token-tzm92
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-02T13:43:04Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-07T12:23:03Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-07T12:23:03Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-02T13:43:04Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://5fd0ea9e91abbf6012fce5a24d595adfa34676a623cb6306280c8616668e2f37
+    image: gcr.io/k8s-minikube/storage-provisioner:v1.8.1
+    imageID: docker://sha256:4689081edb103a9e8174bf23a255bfbe0b2d9ed82edc907abab6989d1c60f02c
+    lastState:
+      terminated:
+        containerID: docker://5c3bb068c0265015fafff550c431221360fba41b3a279945713eb7e24fb97c0b
+        exitCode: 2
+        finishedAt: "2019-10-07T10:39:59Z"
+        reason: Error
+        startedAt: "2019-10-07T10:20:39Z"
+    name: storage-provisioner
+    ready: true
+    restartCount: 12
+    started: true
+    state:
+      running:
+        startedAt: "2019-10-07T12:23:03Z"
+  hostIP: 10.0.2.15
+  phase: Running
+  podIP: 10.0.2.15
+  podIPs:
+  - ip: 10.0.2.15
+  qosClass: BestEffort
+  startTime: "2019-10-02T13:43:04Z"
