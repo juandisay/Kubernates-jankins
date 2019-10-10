@@ -17,9 +17,9 @@ Kubernetes is hosted by the Cloud Native Computing Foundation (CNCF). If your co
 more information: [Kubernates github and documentation](https://github.com/kubernetes/kubernetes)
 
 ##### How to Install
-1. [Provision VPS](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/ProvisionVPS){:target="_blank"}
-   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/Setup%20Kubernates/ProvisionVPS/bootstrap-centos7.sh){:target="_blank"}
-2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/Setup%20Kubernates/vagrant-setup){:target="_blank"}
+1. [Provision VPS](https://github.com/juandisay/automation-server/tree/master/setup-kubernetes/ProvisionVPS){:target="_blank"}
+   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/ProvisionVPS/bootstrap-kube-install-centos7.sh){:target="_blank"}
+2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/setup-kubernetes/vagrant-setup){:target="_blank"}
 3. [Vagrant x AWS](#)
 4. [Vagrant x Digital ocean](#)
 5. [Raspberry Pi 4 Model B](#)
