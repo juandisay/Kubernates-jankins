@@ -3,14 +3,19 @@
 
 
 # Install yum update for latest for update system
+#edit your hostname  
+HOSTNAME=kworker
 
 echo "start update system"
 yum update
 
-
 # Install required packages.
 echo "Install rq packer docker"
-yum install yum-utils device-mapper-persistent-data lvm2
+until yum install yum-utils device-mapper-persistent-data lvm2
+do
+  echo "running installer persisten data"
+  sleep 3
+done
 
 # Add Docker repository.
 echo "docker repository add"
@@ -19,12 +24,10 @@ yum-config-manager \
   https://download.docker.com/linux/centos/docker-ce.repo
 
 # Install Docker CE. 
-echo "install docker"
-yum update && yum install docker-ce-18.06.2.ce
-
+until yum update && yum install docker-ce-18.06.2.ce
 do 
-  echo "--docker was installed--"
-  sleep 2
+  echo "--docker run install--"
+  sleep 5
 done
 
 # Create /etc/docker directory.
@@ -47,26 +50,22 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 
-do 
-  echo "--docker config setup was done--"
-  sleep 2
-done
 
 # docker service
 echo "create path docker service"
 mkdir -p /etc/systemd/system/docker.service.d
 
 # reload and restart
-echo "reload and restart docker"
-echo "reload daemon"
-systemctl daemon-reload
-echo "restart"
-systemctl restart docker
-
+until systemctl daemon-reload
 do
-  echo "finally, docker setup was done!"
-  echo "configuration extend environtment system"
-  sleep 5
+  echo "docker reload"
+  sleep 1
+done
+
+until systemctl restart docker
+do
+  echo "restart docker"
+  sleep 3
 done
 
 # Disable SELinux
@@ -79,28 +78,32 @@ echo "disable firewalld"
 systemctl disable firewalld
 
 echo "stop firewalld"
-systemctl stop firewalld
+until systemctl stop firewalld
+do 
+  echo "firewalld stop it"
+  sleep 3
+done
 
 # Disable swap
 sed -i '/swap/d' /etc/fstab
-echo "swapoff"
-swapoff -a
 
+until swapoff -a
 do
-  echo "finally, configuration was DOne! next Kubernates setup!"
+  echo "swapof,finally, configuration was DOne! next Kubernates setup!"
   sleep 3
 done
 
 # Update sysctl settings for Kubernetes networking
 echo "update sysctl 4 k8s network"
+sleep 1
 cat >>/etc/sysctl.d/kubernetes.conf<<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
 
+until sysctl --system
 do
-  echo "run"
-  sysctl --system
+  echo "run system networking for k8s"
   sleep 3
 done
 
@@ -108,6 +111,7 @@ done
 # Add yum repository
 echo "add repository and install Kubernates"
 echo "add repo"
+sleep 1
 cat >>/etc/yum.repos.d/kubernetes.repo<<EOF
 [kubernetes]
 name=Kubernetes
@@ -120,13 +124,30 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
 EOF
 
 echo "install k8s"
-yum install -y kubeadm kubelet kubectl
+until yum install -y kubeadm kubelet kubectl
+do
+  echo "installing kubelet kubeadm kubectl"
+  sleep 4
+done
 
 # Enable and Start kubelet service
 echo "enable kubelet"
-systemctl enable kubelet
+until systemctl enable kubelet
+do
+  echo "start kubelet"
+  systemctl start kubelet
+  sleep 2
+done
 
-echo "start kubelet"
-systemctl start kubelet
-echo "Setup Kubernet was Done!"
+until hostnamectl set-hostname $HOSTNAME
+do
+  echo "set hostname"
+  sleep 3
+done 
+
+echo "okey, system kubernates was installed! Mission complete!"
+
+do
+  reboot now
+done
 

@@ -25,7 +25,7 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 5. [Raspberry Pi 4 Model B](#)
 6. [AWS](https://aws.amazon.com/kubernetes/){:target="_blank"}
 7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/){:target="_blank"}
-8. [Run k3s 60's on Gcloud](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/gcloud60s/deploys.sh)
+8. [Run k3s 60's on Gcloud](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/gcloud60s/deploys.sh){:target="_blank"}
 
 ##### Configuration
 > Kube system config
