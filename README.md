@@ -18,7 +18,7 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 
 ##### How to Install & Providers
 1. [Provision VPS](https://github.com/juandisay/automation-server/tree/master/setup-kubernetes/ProvisionVPS){:target="_blank"}
-   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/ProvisionVPS/bootstrap-kube-install-centos7.sh){:target="_blank"}
+   - [bootstrap Centos 7](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/ProvisionVPS/centos7/deploys.sh){:target="_blank"}
 2. [Vagrant](https://github.com/juandisay/automation-server/tree/master/setup-kubernetes/vagrant-setup){:target="_blank"}
 3. [Vagrant x AWS](#)
 4. [Vagrant x Digital ocean](#)
