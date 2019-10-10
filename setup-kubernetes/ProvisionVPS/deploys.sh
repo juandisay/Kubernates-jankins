@@ -3,8 +3,10 @@
 
 
 # Install yum update for latest for update system
+
 echo "start update system"
 yum update
+
 
 # Install required packages.
 echo "Install rq packer docker"
@@ -19,6 +21,11 @@ yum-config-manager \
 # Install Docker CE. 
 echo "install docker"
 yum update && yum install docker-ce-18.06.2.ce
+
+do 
+  echo "--docker was installed--"
+  sleep 2
+done
 
 # Create /etc/docker directory.
 echo "create dir /etc/docker"
@@ -40,6 +47,11 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 
+do 
+  echo "--docker config setup was done--"
+  sleep 2
+done
+
 # docker service
 echo "create path docker service"
 mkdir -p /etc/systemd/system/docker.service.d
@@ -50,9 +62,12 @@ echo "reload daemon"
 systemctl daemon-reload
 echo "restart"
 systemctl restart docker
-echo "finally, docker setup was done!"
 
-echo "configuration extend environtment system"
+do
+  echo "finally, docker setup was done!"
+  echo "configuration extend environtment system"
+  sleep 5
+done
 
 # Disable SELinux
 echo "disable SElinux to false"
@@ -71,7 +86,10 @@ sed -i '/swap/d' /etc/fstab
 echo "swapoff"
 swapoff -a
 
-echo "finally, configuration was DOne! next Kubernates setup!"
+do
+  echo "finally, configuration was DOne! next Kubernates setup!"
+  sleep 3
+done
 
 # Update sysctl settings for Kubernetes networking
 echo "update sysctl 4 k8s network"
@@ -79,8 +97,12 @@ cat >>/etc/sysctl.d/kubernetes.conf<<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
-echo "run"
-sysctl --system
+
+do
+  echo "run"
+  sysctl --system
+  sleep 3
+done
 
 # Kubernetes Setup
 # Add yum repository
@@ -96,6 +118,7 @@ repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
         https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOF
+
 echo "install k8s"
 yum install -y kubeadm kubelet kubectl
 
