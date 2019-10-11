@@ -4,7 +4,7 @@
 
 # Install yum update for latest for update system
 #edit your hostname  
-HOSTNAME=kworker
+HOSTNAME=kworker3
 
 echo "start update system"
 echo "yes" | yum update
@@ -63,8 +63,10 @@ do
 done
 
 until systemctl restart docker
+STATUSNGINX=$(systemctl status nginx | less)
 do
   echo "restart docker"
+  $STATUSNGINX
   sleep 3
 done
 
@@ -124,7 +126,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
 EOF
 
 echo "install k8s"
-until yum install -y kubeadm kubelet kubectl
+until echo "yes" | yum install -y kubeadm kubelet kubectl
 do
   echo "installing kubelet kubeadm kubectl"
   sleep 4
@@ -135,8 +137,10 @@ echo "enable kubelet"
 until systemctl enable kubelet
 sleep 3
 systemctl start kubelet
+STATUSKUBELET=$(systemctl status kubelet | less)
 do
-  echo "start kubelet" 
+  echo "start kubelet"
+  $STATUSKUBELET
   sleep 2
 done
 
