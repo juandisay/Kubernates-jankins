@@ -7,7 +7,7 @@
 HOSTNAME=kworker3
 
 echo "start update system"
-echo "y" | yum update
+yum update
 
 # Install required packages.
 echo "Install rq packer docker"
@@ -24,7 +24,7 @@ yum-config-manager \
   https://download.docker.com/linux/centos/docker-ce.repo
 
 # Install Docker CE. 
-until echo "y" | yum install docker-ce-18.06.2.ce
+until yum install docker-ce-18.06.2.ce
 do 
   echo "--docker run install--"
   sleep 5
@@ -126,7 +126,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
 EOF
 
 echo "install k8s"
-until echo "y" | yum install -y kubeadm kubelet kubectl
+until yum install -y kubeadm kubelet kubectl | echo "yes"
 do
   echo "installing kubelet kubeadm kubectl"
   sleep 4
@@ -145,11 +145,13 @@ do
 done
 
 until hostnamectl set-hostname $HOSTNAME
+STATUSHOSTNAME=hostname
 do
   echo "set hostname"
+  $STATUSHOSTNAME
   sleep 3
 done 
 
 echo "okey, system kubernates was installed! Mission complete!"
-
+sleep 6
 shutdown -r +1 "system was reboot in 1 minutes"
