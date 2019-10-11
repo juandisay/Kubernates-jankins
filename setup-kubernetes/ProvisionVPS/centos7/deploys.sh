@@ -5,10 +5,9 @@
 # Install yum update for latest for update system
 #edit your hostname  
 HOSTNAME=kworker3
-DATE=`date +%Y-%m-%d`
 
 echo "start update system"
-yum -y -q update > /dev/null/ 2>&1
+yum update -y -q > /dev/null/ 2>&1
 
 # Install required packages.
 echo "Install rq packer docker"
@@ -20,7 +19,8 @@ yum-config-manager \
   --add-repo \
   https://download.docker.com/linux/centos/docker-ce.repo > /dev/null 2>&1
 
-# Install Docker CE. 
+# Install Docker CE.
+echo "install docker machine" 
 yum install -y -q docker-ce-18.06.2.ce > /dev/null 2>&1
 
 # Create /etc/docker directory.
@@ -49,8 +49,8 @@ mkdir -p /etc/systemd/system/docker.service.d
 
 # reload and restart
 
-until systemctl start docker&&systemctl daemon-reload > /dev/null 2>&1
-sleep 2
+echo "start reload daemon docker"
+systemctl start docker&&systemctl daemon-reload > /dev/null 2>&1
 systemctl restart docker
 
 # Disable SELinux
@@ -75,7 +75,6 @@ done
 
 # Update sysctl settings for Kubernetes networking
 echo "update sysctl 4 k8s network"
-sleep 1
 cat >>/etc/sysctl.d/kubernetes.conf<<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
@@ -86,8 +85,6 @@ sysctl --system >/dev/null 2>&1
 # Kubernetes Setup
 # Add yum repository
 echo "add repository and install Kubernates"
-echo "add repo"
-sleep 1
 cat >>/etc/yum.repos.d/kubernetes.repo<<EOF
 [kubernetes]
 name=Kubernetes
@@ -109,12 +106,10 @@ systemctl enable kubelet > /dev/null 2>&1
 systemctl start kubelet
 
 until hostnamectl set-hostname $HOSTNAME 
-STATUSHOSTNAME=hostname +was changes!!
 do
   echo "hostname was change"
-  sleep 3
+  echo "okey, system kubernates was installed! Mission complete!"
+  sleep 5
 done 
 
-echo "okey, system kubernates was installed! Mission complete!"
-sleep 4
-shutdown -r +1 "system was reboot in 1 minutes" /dev/null 2>&1
+shutdown -r +1 "system was reboot in 1 minutes"
