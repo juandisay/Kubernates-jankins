@@ -133,9 +133,10 @@ done
 # Enable and Start kubelet service
 echo "enable kubelet"
 until systemctl enable kubelet
+sleep 3
+systemctl start kubelet
 do
-  echo "start kubelet"
-  systemctl start kubelet
+  echo "start kubelet" 
   sleep 2
 done
 
@@ -147,4 +148,4 @@ done
 
 echo "okey, system kubernates was installed! Mission complete!"
 
-shutdown -r +0.5 "system was reboot in 1 minutes"
+shutdown -r +1 "system was reboot in 1 minutes"
