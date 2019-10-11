@@ -9,9 +9,6 @@ HOSTNAME=kworker3
 echo "😹 Start update system"
 yum update -y -q 
 
-echo "try install wget"
-yum install -y -q wget
-
 # Install required packages.
 echo "😹 Install rq packer docker"
 yum install -y -q yum-utils device-mapper-persistent-data lvm2 > /dev/null 2>&1
