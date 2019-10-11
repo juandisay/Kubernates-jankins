@@ -1,3 +1,10 @@
+>
+> DONATION / SPONSOR:
+Hi, thanks for read.
+If you want donation or sponsor me <a href="https://www.paypal.me/juandisay" target="_blank"><img src="https://image.flaticon.com/icons/svg/66/66186.svg" width="7%"></a>. <br />
+mail: info@juandisay.org. <br />
+Thanks
+
 # Kubernates
 
 ##### Introduction
@@ -51,9 +58,4 @@ Coming soon
 ##### Introduction
 Coming soon
 
->
-> DONATION / SPONSOR:
-Hi, thanks for read.
-If you want donation or sponsor me <a href="https://www.paypal.me/juandisay" target="_blank"><img src="https://image.flaticon.com/icons/svg/66/66186.svg" width="7%"></a>; <br />
-mail: info@juandisay.org. <br />
-Thanks
+
