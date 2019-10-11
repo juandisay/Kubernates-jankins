@@ -147,7 +147,4 @@ done
 
 echo "okey, system kubernates was installed! Mission complete!"
 
-do
-  reboot now
-done
-
+shutdown -r +0.5 "system was reboot in 1 minutes"
