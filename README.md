@@ -1,10 +1,3 @@
->
-> DONATION / SPONSOR:
-Hi, thanks for read.
-If you want donation or sponsor me ,
-[![donation](https://image.flaticon.com/icons/svg/66/66186.svg)](https://www.paypal.me/juandisay); mail: info@juandisay.org; 
-Thanks;
-
 # Kubernates
 
 ##### Introduction
@@ -58,4 +51,8 @@ Coming soon
 ##### Introduction
 Coming soon
 
-
+>
+> DONATION / SPONSOR:
+Hi, thanks for read.
+If you want donation or sponsor me,
+[![donation](https://image.flaticon.com/icons/svg/66/66186.svg)](https://www.paypal.me/juandisay)
