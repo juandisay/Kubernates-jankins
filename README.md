@@ -54,6 +54,4 @@ Coming soon
 >
 > DONATION / SPONSOR:
 Hi, thanks for read.
-If you want donation or sponsor me,
-<img src="https://image.flaticon.com/icons/svg/66/66186.svg" width="5%">
-[![donation](https://image.flaticon.com/icons/svg/66/66186.svg width="40" height="40")](https://www.paypal.me/juandisay)
+If you want donation or sponsor me <a href="https://www.paypal.me/juandisay"><img src="https://image.flaticon.com/icons/svg/66/66186.svg" width="8%"></a>; mail: info@juandisay.org. Thanks
