@@ -2,7 +2,7 @@
 > DONATION / SPONSOR:
 Hi, thanks for read.
 If you want donation or sponsor me ,
-[donation](https://www.paypal.me/juandisay); mail: info@juandisay.org; 
+[![donation](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPFdZhSxPKav4C9_YRiBcjGgHPKtlX7KCiAfV_ulUhatO4yUTM&s)](https://www.paypal.me/juandisay); mail: info@juandisay.org; 
 Thanks;
 
 # Kubernates
