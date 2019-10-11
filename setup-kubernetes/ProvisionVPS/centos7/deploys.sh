@@ -22,6 +22,7 @@ yum-config-manager \
 # Install Docker CE.
 echo "😹 Install docker machine" 
 yum install -y -q docker-ce-18.06.2.ce > /dev/null 2>&1
+systemctl start docker
 
 # Create /etc/docker directory.
 echo "😹 Try create dir /etc/docker"
@@ -50,7 +51,7 @@ mkdir -p /etc/systemd/system/docker.service.d
 # reload and restart
 
 echo "😹 Start reload daemon docker"
-systemctl start docker&&systemctl daemon-reload > /dev/null 2>&1
+systemctl daemon-reload > /dev/null 2>&1
 systemctl restart docker
 
 # Disable SELinux
