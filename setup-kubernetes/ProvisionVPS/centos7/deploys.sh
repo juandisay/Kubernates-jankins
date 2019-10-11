@@ -7,7 +7,7 @@
 HOSTNAME=kworker
 
 echo "start update system"
-yum update
+echo "yes" | yum update
 
 # Install required packages.
 echo "Install rq packer docker"
@@ -24,7 +24,7 @@ yum-config-manager \
   https://download.docker.com/linux/centos/docker-ce.repo
 
 # Install Docker CE. 
-until yum update && yum install docker-ce-18.06.2.ce
+until echo "yes" | yum install docker-ce-18.06.2.ce
 do 
   echo "--docker run install--"
   sleep 5
