@@ -53,6 +53,7 @@ mkdir -p /etc/systemd/system/docker.service.d
 echo "😹 Start reload daemon docker"
 systemctl daemon-reload > /dev/null 2>&1
 systemctl restart docker
+systemctl enable docker
 
 # Disable SELinux
 echo "😹 Disable SElinux to false and symlink"
