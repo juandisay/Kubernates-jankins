@@ -1,7 +1,7 @@
 >
 > DONATION / SPONSOR:
 Hi, thanks for read.
-If you want donation or sponsor me <a href="https://www.paypal.me/juandisay" target="_blank"><img src="https://image.flaticon.com/icons/png/512/1462/1462232.png" width="7%"></a>. <br />
+If you want sponsor me <a href="https://www.paypal.me/juandisay" target="_blank"><img src="https://image.flaticon.com/icons/png/512/1462/1462232.png" width="7%"></a>. <br />
 mail: info@juandisay.org. <br />
 Thanks
 
