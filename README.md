@@ -26,6 +26,7 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 6. [AWS](https://aws.amazon.com/kubernetes/){:target="_blank"}
 7. [Digital Ocean](https://www.digitalocean.com/products/kubernetes/){:target="_blank"}
 8. [Run k3s 60's on Gcloud](https://raw.githubusercontent.com/juandisay/automation-server/master/setup-kubernetes/gcloud60s/deploys.sh){:target="_blank"}
+9. [Lightweight Kubernetes](https://k3s.io/){:target="_blank"}
 
 ##### Configuration
 > Kube system config
@@ -41,7 +42,7 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 ##### Deployment Advanced
 1. [Kubernetes Dashboard](https://github.com/juandisay/automation-server/tree/master/Configuration/kubernetes-dashboard){:target="_blank"}
 2. [Nginx](https://github.com/juandisay/automation-server/tree/master/Configuration/nginx){:target="_blank"}
-3. [Haproxy](#)
+3. [Haproxy](#
 4. [Cert manager](#)
 5. [Grafana](#)
 6. [Prometheus](#)
