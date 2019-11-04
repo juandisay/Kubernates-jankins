@@ -50,8 +50,6 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 
 # Jankins automation deploy
 
-##### Introduction
-<!-- Coming soon -->
 
 
 # Openfaas
