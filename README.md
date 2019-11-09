@@ -55,6 +55,6 @@ more information: [Kubernates github and documentation](https://github.com/kuber
 # Openfaas
 
 ##### Introduction
-<!-- Coming soon -->
+Link [juandisay](#)
 
 
